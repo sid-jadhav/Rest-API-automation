@@ -1,0 +1,4 @@
+VerifyCard.method=POST
+VerifyCard.BaseURI=http://localhost
+VerifyCard.port=8000
+VerifyCard.basePath=/posts
