@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class dataFileReader {
 	public static Map dataMapper(String fileName, int rowNo){
-		File file= new File("C:\\Users\\LENOVO\\RESTapiSID\\Acceptance-Test\\src\\test\\resources\\DevData\\"+fileName+".txt");
+		File file= new File("C:\\Users\\LENOVO\\git\\Rest-API-Automation\\Acceptance-Test\\src\\test\\resources\\DevData\\"+fileName+".txt");
 		Map details=new HashMap();
 		try {
 			int j=0,stop=0;

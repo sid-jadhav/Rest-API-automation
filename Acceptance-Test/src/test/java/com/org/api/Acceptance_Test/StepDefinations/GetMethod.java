@@ -55,7 +55,7 @@ public class GetMethod {
 	public void response_feild_is(String fieldName, String fieldValue) throws Throwable {
 	    Assert.assertEquals(resp.path(fieldName),fieldValue);
 	}
-	
+	//This will read the json from the file
 	@Given("^a maximal json for \"([^\"]*)\"$")
 	public void a_maximal_json_for(String fileName){
 		jobj=json.parseJson(fileName);
@@ -69,9 +69,10 @@ public class GetMethod {
 	
 	@When("^post \"([^\"]*)\" is called$")
 	public void post_is_called(String Endp) {
-		print.WriteRequest(Endp);
+		//This method sets the URI
 		EndPointReader end=new EndPointReader();
 		RestAssuredConfiguration config= end.configEndPoint(Endp);
+		print.WriteRequest(Endp);
 		resp=given().
 				contentType(ContentType.JSON).body(jobj).
 				when().post(EndPoint.GetEndPoint);

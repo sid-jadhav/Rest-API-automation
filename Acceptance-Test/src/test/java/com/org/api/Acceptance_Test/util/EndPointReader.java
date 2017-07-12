@@ -14,6 +14,7 @@ public class EndPointReader {
 	public static void main(String[] args) {
 		configEndPoint("VerifyCard");
 	}
+	//This method reads the data file and configure the URI
 	public static RestAssuredConfiguration configEndPoint(String APIName){
 		String method=search(APIName+".method");
 		String BaseURI=search(APIName+".BaseURI");
