@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features",
 		glue={"com.org.api.Acceptance_Test"},
-		plugin={"pretty","json:target/sid/cucumber.json"}
+		plugin={"pretty","json:target/sid/cucumber.json","html:target/output","junit:target/junit/cucumber.xml"}
 		)
 public class RunnerTest {
 

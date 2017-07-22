@@ -1,5 +1,5 @@
 Feature: Verify Card Happy Path Scenarios
-
+@1
 Scenario: A successful verify card request with dummy fields
 Given a maximal json for "VerifyCardRequest"
 And request field "requestId" is "2"

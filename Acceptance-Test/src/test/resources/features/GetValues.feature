@@ -1,5 +1,5 @@
 Feature: Get values Happy path Scenario
-
+@sid @king 
 Scenario: A successful Get value request
 Given A request for "Getvalue" 
 #When "GetValue" is called

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="2.551871">
+<testcase classname="Verify Card Happy Path Scenarios" name="A successful verify card request with dummy fields" time="2.551871">
+<system-out><![CDATA[Given a maximal json for "VerifyCardRequest"................................passed
+And request field "requestId" is "2"........................................passed
+And request field "walletProviderId" is "King of King"......................passed
+And request field "sessionId" is "Siddhesh".................................passed
+When post "VerifyCard" is called............................................passed
+Then response feild "requestId" is "2"......................................passed
+And response feild "walletProviderId" is "King of King".....................passed
+And response feild "sessionId" is "Siddhesh"................................passed
+]]></system-out>
+</testcase>
+</testsuite>

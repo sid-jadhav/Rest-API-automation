@@ -18,6 +18,7 @@ import com.org.api.Acceptance_Test.util.JsonReader;
 import org.hamcrest.*;
 
 import cucumber.api.PendingException;
+import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -28,11 +29,15 @@ public class GetMethod {
 	Response resp;
 	JsonReader json=new JsonReader();
 	JSONObject jobj= new JSONObject();
+	Scenario scenario;
 	private final static Logger LOGGER = Logger.getLogger(GetMethod.class.getName());
 	Printer print=new Printer();
 	@Before
-	public void init(){
+	public void init(Scenario scenario){
 		LOGGER.info("init function started");
+		this.scenario=scenario;
+		System.out.println(scenario.getName());
+		System.out.println(scenario.getSourceTagNames().toString());
 	}
 	
 	@Given("^A request for \"([^\"]*)\"$")
@@ -77,7 +82,7 @@ public class GetMethod {
 				contentType(ContentType.JSON).body(jobj).
 				when().post(EndPoint.GetEndPoint);
 		print.WriteResponse(resp.asString());
-		Assert.assertEquals(200, resp.getStatusCode());
+		Assert.assertEquals(201, resp.getStatusCode());
 	}
 	
 }
